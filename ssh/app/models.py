@@ -1,12 +1,9 @@
 from django.db import models
-from django import forms
 
 class Server(models.Model):
 
-    hostname = models.CharField(default='')
-    username = models.CharField(default='')
-    password = models.CharField(widget=forms.PasswordInput)
-
-
+    ip = models.CharField(default='', max_length=500)
+    username = models.CharField(default='', max_length=500)
+    password = models.CharField(default='', max_length=500)
 
 # Create your models here.
